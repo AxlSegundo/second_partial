@@ -1,0 +1,14 @@
+Ingresar las funciones de la siguiente manera:
+# Ejemplo de uso
+expresion = "sin(x) + x**2 - 3*x + 5"  # Expresión simbólica
+variables = "x"  # Definir la variable como una cadena de texto
+
+# Generar una población de valores para x
+valores_poblacion = poblacion(10, 0, 10)  # Generar una población de 10 valores
+
+# Procesar la función con la lista de valores generados
+resultados = procesar_funcion(expresion, variables, valores_poblacion)
+
+# Imprimir los resultados
+for i, valor in enumerate(valores_poblacion):
+    print(f"Valor de x: {valor}, Resultado: {resultados[i]}")
