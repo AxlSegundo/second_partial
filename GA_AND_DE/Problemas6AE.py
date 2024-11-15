@@ -1,3 +1,4 @@
+#Problema 6 con algoritmo evolutivo
 import numpy as np
 import random
 

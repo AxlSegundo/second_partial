@@ -1,3 +1,4 @@
+#Problema 6 con evolución diferencial
 import numpy as np
 import pandas as pd
 import random
