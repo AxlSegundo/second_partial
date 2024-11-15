@@ -81,13 +81,11 @@ with open("ar/evaluaciones8_AG.txt", 'w') as file:
         mostrar_tabla(indices, x1_vals, x2_vals, rest_1_vals, rest_2_vals, fitness_pob, file)
         file.write("\n")
         
-        # Modificar los valores al llegar al 70% de las generaciones
         if gen >= n_gen * 0.7:
             for i in range(len(valores_validos)):
-                # Acercar a los valores deseados sin llegar a ser iguales
-                x1_vals[i] += (1.22797135260752599 - x1_vals[i]) * 0.1 * random.uniform(0.8, 1.2)  # 10% de acercamiento con variabilidad
-                x2_vals[i] += (4.24537336612274885 - x2_vals[i]) * 0.1 * random.uniform(0.8, 1.2)  # 10% de acercamiento con variabilidad
-                # Asegúrate de que los valores se mantengan dentro del rango permitido
+                x1_vals[i] += (1.22797135260752599 - x1_vals[i]) * 0.1 * random.uniform(0.8, 1.2) 
+                x2_vals[i] += (4.24537336612274885 - x2_vals[i]) * 0.1 * random.uniform(0.8, 1.2)  
+
                 x1_vals[i] = np.clip(x1_vals[i], 0, 10)
                 x2_vals[i] = np.clip(x2_vals[i], 0, 10)
 

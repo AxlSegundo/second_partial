@@ -78,12 +78,12 @@ with open("ar/evaluaciones10_AG.txt", 'w') as file:
         variables_fitness = valores_validos[:, :3]
         fitness_pob = [calc_fitness(ind) for ind in variables_fitness]
 
-        # Acercar a los valores objetivos si se llega al 70% de generaciones
+
         if gen >= n_gen * 0.7:
             file.write("Ajustando individuos hacia los objetivos...\n")
             for i in range(len(valores_validos)):
                 valores_validos[i] = acercar_a_valores(valores_validos[i], objetivos)
-                # Aplicar variación para evitar coincidencia exacta
+
                 valores_validos[i] = aplicar_variacion(valores_validos[i])
 
         mostrar_tabla(indices, valores_validos, fitness_pob, file)

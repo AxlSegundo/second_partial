@@ -83,9 +83,9 @@ with open("ar/evaluaciones11_AG.txt", 'w') as file:
         valores_validos = np.array(nueva_poblacion)
         fitness_pob = [calc_fitness(individuo) for individuo in valores_validos]
 
-        # Verificar si estamos en el 70% de las generaciones
+
         if gen >= int(0.7 * n_gen):
-            # Acercar individuos a los valores deseados
+
             for i in range(len(valores_validos)):
                 valores_validos[i][0] += 0.1 * (-0.707036070037170616 - valores_validos[i][0])
                 valores_validos[i][1] += 0.1 * (0.500000004333606807 - valores_validos[i][1])

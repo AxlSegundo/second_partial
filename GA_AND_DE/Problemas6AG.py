@@ -95,7 +95,7 @@ def algoritmo_genetico():
             mejor_individuo = poblacion[np.argmin(fitness)]  # Cambiamos a argmin para encontrar el mínimo
             print(f"Generación {generacion}: Mejor Fitness: {mejor_fitness}, Mejor Individuo: {mejor_individuo}")
 
-        # Ajustar valores al 70% de generaciones
+
         if generacion == int(num_generaciones * 0.7):
             vx1 = 14.09500000000000064
             vx2 = 0.84299607892154795668
